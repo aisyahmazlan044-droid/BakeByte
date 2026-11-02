@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BakeByte — Smart Snacking, Better Living</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- NAVIGATION BAR -->
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo" onclick="switchPage('home')">
+                <span class="logo-text">BakeByte</span>
+                <span class="logo-sub">MALAYSIA</span>
+            </a>
+            <nav class="nav-links" id="navLinks">
+                <a href="#" class="nav-link active" id="link-home" onclick="switchPage('home')">Home</a>
+                <a href="#" class="nav-link" id="link-about" onclick="switchPage('about')">About Us</a>
+                <a href="#" class="nav-link" id="link-products" onclick="switchPage('products')">Products</a>
+                <a href="#" class="nav-link" id="link-innovation" onclick="switchPage('innovation')">Innovation</a>
+                <a href="#" class="nav-link" id="link-collaboration" onclick="switchPage('collaboration')">Business & B2B</a>
+                <a href="#" class="nav-link" id="link-contact" onclick="switchPage('contact')">Contact Us</a>
+            </nav>
+            <div class="nav-action">
+                <button class="btn-primary-sm" onclick="switchPage('collaboration')">Partner With Us</button>
+                <button class="mobile-menu-btn" onclick="toggleMobileMenu()"><i class="fa-solid fa-bars"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <!-- MAIN CONTENT CONTAINER -->
+    <main id="mainContent">
+
+        <!-- 1. PAGE: HOME -->
+        <section class="page active" id="page-home">
+            <div class="hero-section">
+                <div class="hero-content">
+                    <span class="badge"><i class="fa-solid fa-seedling"></i> Malaysian Artisan Innovation</span>
+                    <h1 class="hero-title">Energy In Every Bite,<br><span>Power In Every Move.</span>[cite: 1, 4]</h1>
+                    <p class="hero-desc">Discover thoughtfully crafted energy bars that bring together authentic Malaysian heritage, clean nutrient-dense ingredients, and modern convenience[cite: 3].</p>
+                    <div class="hero-buttons">
+                        <button class="btn-primary" onclick="switchPage('products')">Explore Product <i class="fa-solid fa-arrow-right"></i></button>
+                        <button class="btn-secondary" onclick="switchPage('about')">Our Story</button>
+                    </div>
+                    <div class="hero-stats">
+                        <div><strong>100%</strong><span>Natural Ingredients</span>[cite: 2]</div>
+                        <div><strong>RM 3.30</strong><span>Affordable Price</span>[cite: 4]</div>
+                        <div><strong>Low GI</strong><span>Coconut Sugar</span>[cite: 2, 4]</div>
+                    </div>
+                </div>
+                <div class="hero-image-wrapper">
+                    <img src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&fit=crop&q=80&w=800" alt="BakeByte Energy Bar" class="hero-img">
+                    <div class="floating-badge">
+                        <i class="fa-solid fa-bolt"></i>
+                        <div>
+                            <strong>Instant Energy</strong>[cite: 2]
+                            <span>141 kcal per 30g serving</span>[cite: 2]
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="intro-section">
+                <div class="container text-center">
+                    <span class="section-tag">SNACKING, REIMAGINED</span>
+                    <h2>A Smart Snack for Your Active Lifestyle</h2>
+                    <p class="section-subtitle">We believe snacks can be delicious, convenient, and creatively developed to support students, young adults, and busy professionals on the go.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. PAGE: ABOUT US -->
+        <section class="page" id="page-about" style="display:none;">
+            <div class="container section-padding">
+                <span class="section-tag text-center">OUR STORY & VISION</span>
+                <h2 class="text-center mb-4">About BakeByte</h2>
+                <p class="lead text-center mb-5" style="color: var(--gray);">BakeByte menggabungkan snek moden dengan estetika warisan yang diinspirasikan oleh Malaysia, dicipta khas untuk gaya hidup anda yang aktif[cite: 3].</p>
+                
+                <div class="about-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; margin-top: 3rem;">
+                    <div>
+                        <h3 style="font-family: 'Cormorant Garamond', serif; font-size: 2rem; color: var(--chocolate); margin-bottom: 1rem;">Pernyataan Masalah & Solusi Kami</h3>
+                        <p style="margin-bottom: 1rem; color: var(--gray);">Gaya hidup yang sibuk sering menyebabkan waktu makan dan pengambilan snek kurang teratur. Pengguna memerlukan snek yang mudah dibawa, praktikal untuk aktiviti luar, dan membekalkan tenaga segera[cite: 4].</p>
+                        <p style="color: var(--gray);">BakeByte hadir sebagai solusi praktikal (*on-the-go*) yang sesuai dinikmati oleh pelajar, pekerja, serta individu aktif tanpa memerlukan sebarang penyediaan tambahan[cite: 4].</p>
+                    </div>
+                    <div style="background: var(--bg-beige); padding: 2.5rem; border-radius: 12px;">
+                        <h4 style="font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; color: var(--chocolate); margin-bottom: 1rem;">Sasaran Pengguna</h4>
+                        <ul style="list-style: none; color: var(--gray);">
+                            <li style="margin-bottom: 0.8rem;"><i class="fa-solid fa-check" style="color: var(--crimson); margin-right: 10px;"></i> Pelajar sekolah dan universiti[cite: 4]</li>
+                            <li style="margin-bottom: 0.8rem;"><i class="fa-solid fa-check" style="color: var(--crimson); margin-right: 10px;"></i> Pekerja pejabat & profesional muda[cite: 4]</li>
+                            <li style="margin-bottom: 0.8rem;"><i class="fa-solid fa-check" style="color: var(--crimson); margin-right: 10px;"></i> Individu aktif & gemar aktiviti luar[cite: 4]</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. PAGE: PRODUCTS -->
+        <section class="page" id="page-products" style="display:none;">
+            <div class="container section-padding" style="padding: 4rem 2rem;">
+                <span class="section-tag text-center">SIGNATURE PRODUCT</span>
+                <h2 class="text-center mb-4">BakeByte Protein Energy Bar</h2>
+                <p class="text-center mb-5" style="color: var(--gray);">Bar tenaga bernutrisi tinggi yang diperbuat daripada kurma, kekacang, dan bijian terpilih[cite: 3].</p>
+                
+                <div class="product-card-single" style="background: white; border-radius: 12px; padding: 3rem; box-shadow: 0 10px 30px rgba(0,0,0,0.05); max-width: 900px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 3rem;">
+                    <div>
+                        <img src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&fit=crop&q=80&w=600" alt="Energy Bar" style="width: 100%; border-radius: 8px;">
+                    </div>
+                    <div>
+                        <span class="badge">Net Weight: 30g[cite: 2]</span>
+                        <h3 style="font-family: 'Cormorant Garamond', serif; font-size: 2.2rem; color: var(--chocolate); margin: 0.5rem 0;">RM 3.30 <span style="font-size: 1rem; font-family: 'Plus Jakarta Sans', sans-serif; color: var(--gray);">/ keping[cite: 4]</span></h3>
+                        <p style="color: var(--gray); font-size: 0.95rem; margin-bottom: 1.5rem;">Sesuai untuk sarapan pagi, sebelum/selepas senaman, atau ketika hari anda sibuk[cite: 3].</p>
+                        
+                        <h4 style="font-size: 1rem; color: var(--chocolate); margin-bottom: 0.5rem; font-weight: 700;">Ramuan Semula Jadi[cite: 2]:</h4>
+                        <p style="font-size: 0.85rem; color: var(--gray); margin-bottom: 1.5rem;">Kacang tanah, Gajus, Bertih Beras, Biji Labu, Kurma, Gula Kelapa, Serbuk Koko, Mentega Koko, Air (Tanpa Bahan Pengawet)[cite: 2].</p>
+
+                        <h4 style="font-size: 1rem; color: var(--chocolate); margin-bottom: 0.5rem; font-weight: 700;">Nutrisi (Setiap 30g)[cite: 2]:</h4>
+                        <ul style="font-size: 0.85rem; color: var(--gray); list-style: none; margin-bottom: 1.5rem;">
+                            <li>⚡ Tenaga: 141 kcal[cite: 2]</li>
+                            <li>💪 Protein: 5.1 g[cite: 2]</li>
+                            <li>🌾 Karbohidrat: 16.3 g[cite: 2]</li>
+                        </ul>
+                        <button class="btn-primary" onclick="switchPage('contact')">Enquire About This Product</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. PAGE: INNOVATION -->
+        <section class="page" id="page-innovation" style="display:none;">
+            <div class="container section-padding" style="padding: 4rem 2rem;">
+                <span class="section-tag text-center">PRODUCT DEVELOPMENT</span>
+                <h2 class="text-center mb-4">Proses Penghasilan BakeByte</h2>
+                <p class="text-center mb-5" style="color: var(--gray);">Komitmen kami terhadap kualiti melalui proses pembuatan yang teliti dan bersih[cite: 4].</p>
+                
+                <div class="steps-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; max-width: 1000px; margin: 0 auto;">
+                    <div style="background: white; padding: 2rem; border-radius: 8px; box-shadow: 0 5px 15px rgba(0,0,0,0.03);">
+                        <span style="font-size: 2rem; font-family: 'Cormorant Garamond', serif; color: var(--crimson); font-weight: 700;">01</span>
+                        <h3 style="font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; color: var(--chocolate); margin: 0.5rem 0;">Penyediaan Bahan</h3>
+                        <p style="font-size: 0.9rem; color: var(--gray);">Memilih bahan mentah berkualiti dan menimbang mengikut formulasi yang ditetapkan[cite: 4].</p>
+                    </div>
+                    <div style="background: white; padding: 2rem; border-radius: 8px; box-shadow: 0 5px 15px rgba(0,0,0,0.03);">
+                        <span style="font-size: 2rem; font-family: 'Cormorant Garamond', serif; color: var(--crimson); font-weight: 700;">02</span>
+                        <h3 style="font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; color: var(--chocolate); margin: 0.5rem 0;">Pencampuran & Pembentukan</h3>
+                        <p style="font-size: 0.9rem; color: var(--gray);">Bahan digaul sebati, dibentuk mengikut saiz, diproses, dan disejukkan sebelum dibungkus[cite: 4].</p>
+                    </div>
+                    <div style="background: white; padding: 2rem; border-radius: 8px; box-shadow: 0 5px 15px rgba(0,0,0,0.03);">
+                        <span style="font-size: 2rem; font-family: 'Cormorant Garamond', serif; color: var(--crimson); font-weight: 700;">03</span>
+                        <h3 style="font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; color: var(--chocolate); margin: 0.5rem 0;">Pembungkusan</h3>
+                        <p style="font-size: 0.9rem; color: var(--gray);">Dibungkus secara individu bagi menjamin kebersihan, kesegaran, dan kemudahan pengguna[cite: 4].</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. PAGE: BUSINESS & COLLABORATION -->
+        <section class="page" id="page-collaboration" style="display:none;">
+            <div class="container section-padding" style="padding: 4rem 2rem; max-width: 800px;">
+                <span class="section-tag text-center">B2B & PARTNERSHIPS</span>
+                <h2 class="text-center mb-4">Business & Collaboration</h2>
+                <p class="text-center mb-5" style="color: var(--gray);">Potensi komersial yang luas untuk jualan terus, tempahan pukal acara, serta peluang peruncitan[cite: 4].</p>
+                
+                <form style="background: white; padding: 2.5rem; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.05);" onsubmit="event.preventDefault(); alert('Terima kasih! Pertanyaan anda telah dihantar.');">
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 1.5rem;">
+                        <div>
+                            <label style="display: block; font-size: 0.85rem; font-weight: 600; margin-bottom: 0.5rem; color: var(--chocolate);">Full Name</label>
+                            <input type="text" required style="width: 100%; padding: 0.8rem; border: 1px solid #ddd; border-radius: 4px;">
+                        </div>
+                        <div>
+                            <label style="display: block; font-size: 0.85rem; font-weight: 600; margin-bottom: 0.5rem; color: var(--chocolate);">Company / Organisation</label>
+                            <input type="text" style="width: 100%; padding: 0.8rem; border: 1px solid #ddd; border-radius: 4px;">
+                        </div>
+                    </div>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 1.5rem;">
+                        <div>
+                            <label style="display: block; font-size: 0.85rem; font-weight: 600; margin-bottom: 0.5rem; color: var(--chocolate);">Email Address</label>
+                            <input type="email" required style="width: 100%; padding: 0.8rem; border: 1px solid #ddd; border-radius: 4px;">
+                        </div>
+                        <div>
+                            <label style="display: block; font-size: 0.85rem; font-weight: 600; margin-bottom: 0.5rem; color: var(--chocolate);">Phone Number</label>
+                            <input type="tel" required style="width: 100%; padding: 0.8rem; border: 1px solid #ddd; border-radius: 4px;">
+                        </div>
+                    </div>
+                    <div style="margin-bottom: 1.5rem;">
+                        <label style="display: block; font-size: 0.85rem; font-weight: 600; margin-bottom: 0.5rem; color: var(--chocolate);">Enquiry Type</label>
+                        <select style="width: 100%; padding: 0.8rem; border: 1px solid #ddd; border-radius: 4px; background: white;">
+                            <option>Bulk Orders</option>
+                            <option>Event and Booth Collaboration</option>
+                            <option>Retail and Distribution Opportunities</option>
+                            <option>Custom Product Enquiries</option>
+                        </select>
+                    </div>
+                    <div style="margin-bottom: 1.5rem;">
+                        <label style="display: block; font-size: 0.85rem; font-weight: 600; margin-bottom: 0.5rem; color: var(--chocolate);">Message</label>
+                        <textarea rows="4" style="width: 100%; padding: 0.8rem; border: 1px solid #ddd; border-radius: 4px;"></textarea>
+                    </div>
+                    <button type="submit" class="btn-primary" style="width: 100%; justify-content: center;">Submit Enquiry</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- 6. PAGE: CONTACT US -->
+        <section class="page" id="page-contact" style="display:none;">
+            <div class="container section-padding" style="padding: 4rem 2rem; max-width: 800px;">
+                <span class="section-tag text-center">GET IN TOUCH</span>
+                <h2 class="text-center mb-4">Contact Us</h2>
+                <p class="text-center mb-5" style="color: var(--gray);">Hubungi kami melalui saluran di bawah atau lawati lokasi pengeluaran kami.</p>
+                
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-bottom: 3rem;">
+                    <a href="https://wa.me/601112345678" target="_blank" style="background: white; padding: 2rem; border-radius: 8px; text-decoration: none; color: var(--chocolate); text-align: center; box-shadow: 0 5px 15px rgba(0,0,0,0.03); display: block;">
+                        <i class="fa-brands fa-whatsapp" style="font-size: 2.5rem; color: #25D366; margin-bottom: 1rem;"></i>
+                        <h3 style="font-family: 'Cormorant Garamond', serif; font-size: 1.3rem;">WhatsApp Chat</h3>
+                        <p style="font-size: 0.85rem; color: var(--gray);">Klik untuk berhubung pantas</p>
+                    </a>
+                    <a href="https://instagram.com" target="_blank" style="background: white; padding: 2rem; border-radius: 8px; text-decoration: none; color: var(--chocolate); text-align: center; box-shadow: 0 5px 15px rgba(0,0,0,0.03); display: block;">
+                        <i class="fa-brands fa-instagram" style="font-size: 2.5rem; color: #E1306C; margin-bottom: 1rem;"></i>
+                        <h3 style="font-family: 'Cormorant Garamond', serif; font-size: 1.3rem;">Instagram</h3>
+                        <p style="font-size: 0.85rem; color: var(--gray);">@bakebyte.malaysia</p>
+                    </a>
+                </div>
+
+                <div style="background: white; padding: 2rem; border-radius: 8px; box-shadow: 0 5px 15px rgba(0,0,0,0.03);">
+                    <h3 style="font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; color: var(--chocolate); margin-bottom: 1rem;">Lokasi Pengilangan</h3>
+                    <p style="color: var(--gray); font-size: 0.95rem; margin-bottom: 0.5rem;"><i class="fa-solid fa-location-dot" style="color: var(--crimson); margin-right: 8px;"></i> Dikilangkan oleh Giget Bakery, K-07 Lebuh, UMP Holdings, 26300 Gambang, Pahang[cite: 2].</p>
+                    <p style="color: var(--gray); font-size: 0.95rem;"><i class="fa-solid fa-envelope" style="color: var(--crimson); margin-right: 8px;"></i> hello@bakebyte.com.my</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-col">
+                <h3 class="footer-logo">BakeByte</h3>
+                <p>Smart Snacking, Better Living. Modern artisan energy bars crafted with heritage-inspired aesthetics and natural ingredients.</p>
+                <div class="social-links">
+                    <a href="https://instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://whatsapp.com" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+                    <a href="mailto:contact@bakebyte.com"><i class="fa-solid fa-envelope"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#" onclick="switchPage('home')">Home</a></li>
+                    <li><a href="#" onclick="switchPage('about')">About Us</a></li>
+                    <li><a href="#" onclick="switchPage('products')">Products</a></li>
+                    <li><a href="#" onclick="switchPage('innovation')">Innovation</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Business</h4>
+                <ul>
+                    <li><a href="#" onclick="switchPage('collaboration')">Bulk Orders</a></li>
+                    <li><a href="#" onclick="switchPage('collaboration')">Retail & Distribution</a></li>
+                    <li><a href="#" onclick="switchPage('collaboration')">Event Collaboration</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contact Info</h4>
+                <p><i class="fa-solid fa-location-dot"></i> Giget Bakery, K-07 Lebuh, UMP Holdings, 26300 Gambang, Pahang[cite: 2]</p>
+                <p><i class="fa-solid fa-phone"></i> +60 11-1234 5678</p>
+                <p><i class="fa-solid fa-envelope"></i> hello@bakebyte.com.my</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 BakeByte Malaysia. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JAVASCRIPT UNTUK SISTEM TAB HALAMAN -->
+    <script>
+        function switchPage(pageId) {
+            // Sembunyikan semua halaman
+            const pages = document.querySelectorAll('.page');
+            pages.forEach(page => {
+                page.style.display = 'none';
+            });
+
+            // Paparkan halaman pilihan
+            const targetPage = document.getElementById('page-' + pageId);
+            if (targetPage) {
+                targetPage.style.display = 'block';
+            }
+
+            // Kemaskini kelas aktif pada menu navbar
+            const links = document.querySelectorAll('.nav-link');
+            links.forEach(link => link.classList.remove('active'));
+            
+            const activeLink = document.getElementById('link-' + pageId);
+            if (activeLink) {
+                activeLink.classList.add('active');
+            }
+
+            // Tutup menu mudah alih jika dibuka
+            const navLinks = document.getElementById('navLinks');
+            if (navLinks.style.display === 'flex' && window.innerWidth <= 900) {
+                navLinks.style.display = 'none';
+            }
+
+            // Skrin naik ke atas secara lancar
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function toggleMobileMenu() {
+            const navLinks = document.getElementById('navLinks');
+            if (navLinks.style.display === 'flex') {
+                navLinks.style.display = 'none';
+            } else {
+                navLinks.style.display = 'flex';
+                navLinks.style.flexDirection = 'column';
+                navLinks.style.position = 'absolute';
+                navLinks.style.top = '100%';
+                navLinks.style.left = '0';
+                navLinks.style.width = '100%';
+                navLinks.style.backgroundColor = 'var(--soft-cream)';
+                navLinks.style.padding = '1.5rem';
+                navLinks.style.borderBottom = '1px solid rgba(73, 51, 38, 0.1)';
+            }
+        }
+    </script>
+</body>
+</html>
